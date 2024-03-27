@@ -1,1 +1,2 @@
 # ghost.tec
+# ghost.io
