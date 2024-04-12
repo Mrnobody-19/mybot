@@ -32,9 +32,9 @@ function wishMe() {
 }
 
 window.addEventListener('load', ()=>{
-    speak("allow me to introduce myself,i am ghost tec, your virtual artificial intelligence.");
-    speak("i Am here to assist you with a variety of task if i can. 24 hours a day,7 days a week");
-    speak("importing some prefrences from your database. system now fully online");
+    speak("allow me to introduce myself,i am axel, your virtual artificial intelligence.");
+    speak("i Am here to assist you with a variety of task since i can. 24 hours a day,7 days a week");
+    speak("importing some prefrences from your home interface. system now fully online");
     wishMe();
 })
 
@@ -61,8 +61,8 @@ function speakThis(message){
 
   speech.text = "i did not understand"
 
-    if(message.includes('hey ghost') || message.includes('wake up daddy is home')) {
-        const finalTest ="Hello Boss";
+    if(message.includes('hey ghost') || message.includes('hello')) {
+        const finalTest ="Hello Boss how are you today.";
         speech.text = finalTest;
    }
 
@@ -72,7 +72,7 @@ function speakThis(message){
    }
 
    else if(message.includes('name')){
-    const finalTest = "my name is Ghost . io";
+    const finalTest = "my name is Ghost.tec";
     speech.text = finalTest;
    }
 
@@ -88,8 +88,8 @@ function speakThis(message){
     speech.text = finalTest;
    }
 
-   else if(message.includes('open vscode')) {
-    window.open('vscode');
+   if(message.includes('open vscode')) {
+    window.open('msedge.exe');
     const finalTest = "opening vscode";
     speech.text = finalTest;
    }
@@ -100,14 +100,21 @@ function speakThis(message){
     speech.text = finalTest;
    }
 
+   
+   else if(message.includes('open google')) {
+    window.open("https://google.com", "_blank");
+    const finalTest = "Opening google";
+    speech.text = finalTest;
+   }
+
    else if(message.includes('what is') || message.includes('who is') || message.includes('what are')) {
-    window.open('https://www.google.com/search?q=${message.replace(" ","")}', "_blank");
+    window.open('https://www.google.com/search?q={message.replace(" ","+")}', "_blank");
     const finalTest = "This is what i found regarding " + message;
     speech.text = finalTest;
    }
 
    else{
-    window.open('https://www.google.com/search${message.replace(" ", "+")}',"_blank");
+    window.open('https://www.google.com/search?q={message.replace(" ", "+")}',"_blank");
     const finalTest = "I found some information for" + message + "on google";
     speech.text = finalTest;
    }
